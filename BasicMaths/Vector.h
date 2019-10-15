@@ -12,6 +12,22 @@ public:
 	float MagnitudeSquared() const;
 	void Normalize();
 
+	inline BMVector2 operator+(const float rhs) const {
+		return BMVector2(x + rhs, y + rhs);
+	}
+
+	inline BMVector2 operator+(const BMVector2 rhs) const {
+		return BMVector2(x + rhs.x, y + rhs.y);
+	}
+
+	inline BMVector2 operator-(const float rhs) const {
+		return BMVector2(x - rhs, y - rhs);
+	}
+
+	inline BMVector2 operator-(const BMVector2 rhs) const {
+		return BMVector2(x - rhs.x, y - rhs.y);
+	}
+
 	float x, y;
 };
 

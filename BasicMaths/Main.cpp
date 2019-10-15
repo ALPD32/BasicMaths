@@ -9,6 +9,14 @@ int main() {
 	std::cout << "p(" << p.x << ", " << p.y << ")\n";
 	std::cout << "p length: " << p.Magnitude() << "\n\n";
 
+	BMVector2 s;
+	BMVector2 f;
+	s = v - 2;
+	f = p + v;
+
+	std::cout << "s(" << s.x << ", " << s.y << ")\n";
+	std::cout << "f(" << f.x << ", " << f.y << ")\n\n";
+
 	v.Normalize();
 	p.Normalize();
 
@@ -16,4 +24,6 @@ int main() {
 	std::cout << "v length: " << v.Magnitude() << "\n\n";
 	std::cout << "p(" << p.x << ", " << p.y << ")\n";
 	std::cout << "p length: " << p.Magnitude() << "\n\n";
+
+	return 0;
 }
