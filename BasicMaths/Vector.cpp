@@ -12,8 +12,8 @@ BMVector2 BMVector2::Normalize() const {
 	float Length = Magnitude();
 	BMVector2 v1;
 
-	v1.x /= Length;
-	v1.y /= Length;
+	v1.x = x / Length;
+	v1.y = y / Length;
 
 	return v1;
 }

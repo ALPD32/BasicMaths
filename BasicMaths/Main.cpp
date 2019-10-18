@@ -17,13 +17,13 @@ int main() {
 	std::cout << "s(" << s.x << ", " << s.y << ")\n";
 	std::cout << "f(" << f.x << ", " << f.y << ")\n\n";
 
-	v.Normalize();
-	p.Normalize();
+	s = v.Normalize();
+	f = p.Normalize();
 
-	std::cout << "v(" << v.x << ", " << v.y << ")\n";
-	std::cout << "v length: " << v.Magnitude() << "\n\n";
-	std::cout << "p(" << p.x << ", " << p.y << ")\n";
-	std::cout << "p length: " << p.Magnitude() << "\n\n";
+	std::cout << "s(" << s.x << ", " << s.y << ")\n";
+	std::cout << "s length: " << s.Magnitude() << "\n\n";
+	std::cout << "f(" << f.x << ", " << f.y << ")\n";
+	std::cout << "f length: " << f.Magnitude() << "\n\n";
 
 	return 0;
 }
