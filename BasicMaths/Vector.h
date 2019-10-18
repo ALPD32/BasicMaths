@@ -5,26 +5,26 @@
 
 class BMVector2 {
 public:
-	inline BMVector2() { x = 0.f; y = 0.f; };
-	inline BMVector2(float ax, float ay) { x = ax; y = ay; };
+	BMVector2() { x = 0.f; y = 0.f; };
+	BMVector2(float ax, float ay) { x = ax; y = ay; };
 	
 	float Magnitude() const;
 	float MagnitudeSquared() const;
-	void Normalize();
+	BMVector2 Normalize() const;
 
-	inline BMVector2 operator+(const float rhs) const {
+	BMVector2 operator+(const float rhs) const {
 		return BMVector2(x + rhs, y + rhs);
 	}
 
-	inline BMVector2 operator+(const BMVector2 rhs) const {
+	BMVector2 operator+(const BMVector2 rhs) const {
 		return BMVector2(x + rhs.x, y + rhs.y);
 	}
 
-	inline BMVector2 operator-(const float rhs) const {
+	BMVector2 operator-(const float rhs) const {
 		return BMVector2(x - rhs, y - rhs);
 	}
 
-	inline BMVector2 operator-(const BMVector2 rhs) const {
+	BMVector2 operator-(const BMVector2 rhs) const {
 		return BMVector2(x - rhs.x, y - rhs.y);
 	}
 

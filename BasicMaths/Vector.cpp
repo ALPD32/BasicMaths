@@ -8,8 +8,12 @@ float BMVector2::MagnitudeSquared() const {
 	return x * x + y * y;
 }
 
-void BMVector2::Normalize() {
+BMVector2 BMVector2::Normalize() const {
 	float Length = Magnitude();
-	x /= Length;
-	y /= Length;
+	BMVector2 v1;
+
+	v1.x /= Length;
+	v1.y /= Length;
+
+	return v1;
 }
